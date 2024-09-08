@@ -13,7 +13,7 @@ import { fileURLToPath } from 'url';
 
 
 const corsConfig = {
-  origin: "*",
+  origin: "https://fluentorr-ovhbackend.vercel.app/",
   credential: true,
   methods: ["GET","POST","PUT","DELETE","OPTIONS"],
   allowedHeaders: ["Content-Type", "Request-Index"],
@@ -44,10 +44,6 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 app.use(express.static(path.join(__dirname, 'dist')));
 
-
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'dist', 'index.html'));
-});
 
 app.post('/api/analyze', upload.single('file'), async (req, res) => {
   const audioBuffer = req.file.buffer;
