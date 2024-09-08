@@ -225,6 +225,6 @@ async function doEval(userId, audioType, sampleRate, requestParams, audioBuffer)
   });
 }
 
-app.listen(port, () => {
+app.listen(port,'0.0.0.0', () => {
   console.log(`Backend server running at http://localhost:${port}`);
 });
