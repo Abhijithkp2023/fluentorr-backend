@@ -22,7 +22,7 @@ const corsConfig = {
 dotenv.config();
 
 const app = express();
-const port = 3001;
+const port = 80;
 
 const appKey = process.env.APP_KEY;
 const secretKey = process.env.SECRET_KEY;
