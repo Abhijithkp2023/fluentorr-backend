@@ -13,7 +13,7 @@ import { fileURLToPath } from 'url';
 
 
 const corsConfig = {
-  origin: "https://fluentorr-ovhbackend.vercel.app/",
+  origin: "*",
   credential: true,
   methods: ["GET","POST","PUT","DELETE","OPTIONS"],
   allowedHeaders: ["Content-Type", "Request-Index"],
