@@ -113,7 +113,6 @@ async function convertToWav(inputBuffer) {
       ])
       .format('wav')
       .on('error', (err) => {
-        console.error('ffmpeg error:', err.message);
         reject(err);
       })
       .pipe(outputStream, { end: true });
